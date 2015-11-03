@@ -28,29 +28,28 @@
     [self.window makeKeyAndVisible];
 
     TravelViewController *travelVC = [[TravelViewController alloc] init];
-    travelVC.title = @"游记";
     UINavigationController *travelNC = [[UINavigationController alloc] initWithRootViewController:travelVC];
+    travelNC.tabBarItem.image = [UIImage imageNamed:@"homeIcon.png"];
     
     VideoViewController *videoVC = [[VideoViewController alloc] init];
-    videoVC.title = @"视频";
     UINavigationController *videoNC = [[UINavigationController alloc] initWithRootViewController:videoVC];
+    videoNC.tabBarItem.image = [UIImage imageNamed:@"videoIcon.png"];
+    
     
     DestinationViewController *destinationVC = [[DestinationViewController alloc] init];
-    destinationVC.title = @"目的地";
     UINavigationController *destinationNC = [[UINavigationController alloc] initWithRootViewController:destinationVC];
+    destinationNC.tabBarItem.image = [UIImage imageNamed:@"localIcon.png"];
+    
     
     MyViewController *myVC = [[MyViewController alloc] init];
-    myVC.title = @"我的";
     UINavigationController *myNC = [[UINavigationController alloc] initWithRootViewController:myVC];
+    myNC.tabBarItem.image = [UIImage imageNamed:@"peopleIcon.png"];
     
     
     UITabBarController *tabBC = [[UITabBarController alloc] init];
     tabBC.tabBar.barTintColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg.png"]];
     [tabBC setViewControllers:@[travelNC, videoNC, destinationNC, myNC]];
     self.window.rootViewController = tabBC;
-    
-    
-    
     
     
     return YES;

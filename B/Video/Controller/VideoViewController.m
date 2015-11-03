@@ -17,6 +17,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.navigationItem.title = @"视频";
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
